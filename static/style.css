@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155
+    );
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+.container{
+
+    width:90%;
+    max-width:1000px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.3);
+}
+
+h1{
+
+    text-align:center;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+    font-size:45px;
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#64748b;
+
+    margin-bottom:30px;
+}
+
+form{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:30px;
+}
+
+input{
+
+    flex:1;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#f1f5f9;
+
+    font-size:16px;
+}
+
+button{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+button:hover{
+
+    background:#2563eb;
+
+    transform:translateY(-2px);
+}
+
+.sql-box{
+
+    background:#0b1736;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    margin-bottom:25px;
+}
+
+.sql-box h2{
+
+    margin-bottom:15px;
+}
+
+.sql-box code{
+
+    font-size:22px;
+}
+
+.result-box{
+
+    background:#f8fafc;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.1);
+}
+
+.result-box h2{
+
+    margin-bottom:20px;
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+th{
+
+    background:#3b82f6;
+
+    color:white;
+
+    padding:15px;
+}
+
+td{
+
+    padding:15px;
+
+    border-bottom:1px solid #ddd;
+
+    text-align:center;
+}
+
+tr:hover{
+
+    background:#eef4ff;
+}

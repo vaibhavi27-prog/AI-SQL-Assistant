@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI SQL Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI SQL Assistant</h1>
+
+    <p class="subtitle">
+        Ask questions in plain English and get SQL results instantly
+    </p>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="question"
+            placeholder="Ask a database question..."
+            required>
+
+        <button type="submit">
+            Ask
+        </button>
+
+    </form>
+
+    {% if sql_query %}
+
+    <div class="sql-box">
+
+        <h2>Generated SQL</h2>
+
+        <code>{{ sql_query }}</code>
+
+    </div>
+
+    {% endif %}
+
+    {% if result %}
+
+    <div class="result-box">
+
+        <h2>Results</h2>
+
+        <table>
+
+            <tr>
+
+                {% for col in columns %}
+                <th>{{ col }}</th>
+                {% endfor %}
+
+            </tr>
+
+            {% for row in result %}
+
+            <tr>
+
+                {% for item in row %}
+                <td>{{ item }}</td>
+                {% endfor %}
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>
